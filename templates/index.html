@@ -1,0 +1,44 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+<title>Home</title> 
+{% endblock %}
+
+
+{% block body %}
+  <div>
+      
+  </div>
+  <form method="post">
+
+    <label for="firstName">FirstName</label>
+    <input name="firstName" id="firstName" required>
+
+    <label for="lastName">LastName</label>
+    <input name="lastName" id="lastName" required>
+
+    <label for="extension">extension</label>
+    <input name="extension" id="extension" required>
+
+    <label for="email">Email</label>
+    <input name="email" id="email" required>
+
+    <label for="officeCode">OfficeCode</label>
+    <input name="officeCode" id="officeCode" required>
+
+    <label for="reportsTo">ReportsTo</label>
+    <input name="reportsTo" id="reportsTo" required>
+
+    <label for="jobTitle">JobTitle</label>
+    <input name="jobTitle" id="jobTitle" required>
+
+    <input type="submit" value="insert">
+  </form>
+{% endblock %}
+
+<!-- <label for="user">User</label>
+<input name="user" id="user" required>
+ -->
+
+ <!-- <label for="password">Password</label> -->
+<!-- <input type="password" name="password" id="password" required> -->

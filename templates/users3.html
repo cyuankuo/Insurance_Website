@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    <div class="content-section">
+
+
+
+
+
+
+    <br/>
+    <h3>
+    	Employee Details
+    </h3>
+    <br/>
+    <table >
+    	<thread>
+    		{% for user in userName %}
+    		<tr>
+    			<td>Employee ID  </td> <td> {{ user[0] }}</td>
+    		</tr>
+    		<tr>
+    			<td> Last Name  </td> <td> {{ user[1] }}</td>
+    		</tr>
+    		<tr>
+    			<td> First Name </td> <td> {{ user[2] }}</td>
+    		</tr>
+    		<tr>
+    			<td> Extension </td> <td> {{ user[3] }}</td>
+    		</tr>
+    		<tr>
+    			<td>Office Code</td> <td> {{ user[4] }}</td>
+    		</tr>
+    		<tr>
+    			<td>Reports To  </td> <td> {{ user[5] }}</td>
+    		</tr>
+    		<tr>
+    			<td>Job Title  </td> <td> {{ user[6] }}</td>
+    		</tr>
+    		<tr>
+    			<td>City </td> <td> {{ user[7] }}</td>
+    		</tr>
+        <tr>
+    			<td>Phone  </td> <td> {{ user[8] }}</td>
+    		</tr>
+        <tr>
+    			<td>Address Line 1  </td> <td> {{ user[9] }}</td>
+    		</tr>
+        <tr>
+    			<td>Address Line 2  </td> <td> {{ user[10] }}</td>
+    		</tr>
+        <tr>
+    			<td>State </td> <td> {{ user[11] }}</td>
+    		</tr>
+        <tr>
+    			<td>Postal Code  </td> <td> {{ user[12] }}</td>
+    		</tr>
+    		{% endfor %}
+    	</thread>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

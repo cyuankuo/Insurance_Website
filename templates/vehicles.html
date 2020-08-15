@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Vehicle Details</legend>
+
+                <div class="form-group">
+                    {{ form.vehicleNumber.label(class="form-control-label") }}
+                    {% if form.vehicleNumber.errors %}
+                        {{ form.vehicleNumber(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.vehicleNumber.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.vehicleNumber(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+
+                <div class="form-group">
+                    {{ form.vehicleModel.label(class="form-control-label") }}
+                    {% if form.vehicleModel.errors %}
+                        {{ form.vehicleModel(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.vehicleModel.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.vehicleModel(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+
+                <div class="form-group">
+                    {{ form.makeModelYear.label(class="form-control-label") }}
+                    {% if form.makeModelYear.errors %}
+                        {{ form.makeModelYear(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.makeModelYear.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.makeModelYear(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+
+                <div class="form-group">
+                {{ form.status.label(class="form-control-label") }}
+                {{ form.status }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.policyNumber.label(class="form-control-label") }}
+                    {% if form.policyNumber.errors %}
+                        {{ form.policyNumber(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.policyNumber.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.policyNumber(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                {{ form.insuranceType.label(class="form-control-label") }}
+                {{ form.insuranceType }}
+                </div>
+
+
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+        </small>
+    </div>
+{% endblock content %}

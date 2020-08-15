@@ -1,0 +1,47 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+<title>tables</title>
+<link rel="stylesheet" type="text/css" href="content_table.css" media="screen"/>
+{% endblock %}
+<stype>
+
+
+</>
+{% block body %}
+<br/>
+<h3>
+	Policy Details
+</h3>
+<br/>
+<table >
+	{% for user in userName1 %}
+	<tr>
+		<td>Policy Number  </td> <td> {{ user[0] }}</td>
+	</tr>
+	<tr>
+		<td>Start Date  </td> <td> {{ user[1] }}</td>
+	</tr>
+	<tr>
+		<td>End Date  </td> <td> {{ user[2] }}</td>
+	</tr>
+	<tr>
+		<td>Premium  </td> <td> {{ user[3] }}</td>
+	</tr>
+	<tr>
+		<td>Policy Status  </td> <td> {{ user[4] }}</td>
+	</tr>
+	<tr>
+		<td>Customer ID  </td> <td> {{ user[5] }}</td>
+	</tr>
+	<tr>
+		<td>Insurance Type  </td> <td> {{ user[6] }}</td>
+	</tr>
+	<tr>
+		<td>Employee ID  </td> <td> {{ user[7] }}</td>
+	</tr>
+
+	{% endfor %}
+
+
+{% endblock %}
